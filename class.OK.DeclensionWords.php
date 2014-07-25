@@ -8,7 +8,7 @@
 
 
 
-class CWordsEnding
+class CDeclensionWords
 {
 
   private static $count;
@@ -39,13 +39,13 @@ class CWordsEnding
   private static function getData()
   {
     if (preg_match('/^(1|([0-9]+)1)$/', self::$count))
-      $word_ending = self::$Nominative_singular;
+      $word = self::$Nominative_singular;
     if (preg_match('/^([0-9]+)?(2|3|4)$/', self::$count))
-      $word_ending = self::$Genitive_singular;
+      $word = self::$Genitive_singular;
     if (preg_match('/^(11|12|13|14|15|16|17|18|19|([0-9]+)?(5|6|7|8|9|0))$/', self::$count))
-      $word_ending = self::$Genitive_plural;
+      $word = self::$Genitive_plural;
 
-    self::$word_ending = $word_ending;
+    self::$word = $word;
   }
 
 }
