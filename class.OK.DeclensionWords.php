@@ -1,6 +1,6 @@
 <?
 
-/*
+/**
  * © Oleg V. Krasnov / oleg.v.krasnov@gmail.com / skype: oleg.v.krasnov
  * Created: 25 july 2014
  * Version: 1.1
@@ -31,7 +31,7 @@ class CDeclensionWords
       self::getData();
     }
     else
-      exit(DATA_ERROR);
+      exit('Houston, we have a problem!');
 
     return self::$declension_word;
   }
