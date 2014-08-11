@@ -3,7 +3,7 @@
 /*
  * © Oleg V. Krasnov / oleg.v.krasnov@gmail.com / skype: oleg.v.krasnov
  * Created: 25 july 2014
- * Version: 1.0
+ * Version: 1.1
  */
 
 
@@ -15,7 +15,7 @@ class CDeclensionWords
   private static $Nominative_singular;
   private static $Genitive_singular;
   private static $Genitive_plural;
-  private static $word_ending;
+  private static $declension_word;
 
 
 
@@ -33,7 +33,7 @@ class CDeclensionWords
     else
       exit(DATA_ERROR);
 
-    return self::$word_ending;
+    return self::$declension_word;
   }
   
   private static function getData()
@@ -45,7 +45,7 @@ class CDeclensionWords
     if (preg_match('/^(11|12|13|14|15|16|17|18|19|([0-9]+)?(5|6|7|8|9|0))$/', self::$count))
       $word = self::$Genitive_plural;
 
-    self::$word = $word;
+    self::$declension_word = $word;
   }
 
 }
