@@ -7,7 +7,7 @@ OK.DeclensionWords
 
 Например: 1 матрёшка, 2 матрёшки, 25 матрёшек.
 
-````javascript
+````php
 $count = 100;
 $word = CDeclensionWords::setData($count, 'матрёшка', 'матрёшки', 'матрёшек');
 echo "$count $word"; // 100 матрёшек
